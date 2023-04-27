@@ -22,6 +22,7 @@
 
 # Jupyter notebook
 *.ipynb  text
+*.ipynb filter=strip-notebook-output
 
 # Note: .db, .p, and .pkl files are associated
 # with the python modules ``pickle``, ``dbm.*``,
