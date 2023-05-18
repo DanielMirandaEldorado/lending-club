@@ -1042,6 +1042,14 @@ MarkupSafe = ">=2.0"
 i18n = ["Babel (>=2.7)"]
 
 [[package]]
+name = "joblib"
+version = "1.2.0"
+description = "Lightweight pipelining with Python functions"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "jsonschema"
 version = "4.9.1"
 description = "An implementation of JSON Schema validation for Python"
@@ -1697,6 +1705,26 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "scikit-learn"
+version = "1.2.2"
+description = "A set of python modules for machine learning and data mining"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+joblib = ">=1.1.1"
+numpy = ">=1.17.3"
+scipy = ">=1.3.2"
+threadpoolctl = ">=2.0.0"
+
+[package.extras]
+benchmark = ["matplotlib (>=3.1.3)", "pandas (>=1.0.5)", "memory-profiler (>=0.57.0)"]
+docs = ["matplotlib (>=3.1.3)", "scikit-image (>=0.16.2)", "pandas (>=1.0.5)", "seaborn (>=0.9.0)", "memory-profiler (>=0.57.0)", "sphinx (>=4.0.1)", "sphinx-gallery (>=0.7.0)", "numpydoc (>=1.2.0)", "Pillow (>=7.1.2)", "pooch (>=1.6.0)", "sphinx-prompt (>=1.3.0)", "sphinxext-opengraph (>=0.4.2)", "plotly (>=5.10.0)"]
+examples = ["matplotlib (>=3.1.3)", "scikit-image (>=0.16.2)", "pandas (>=1.0.5)", "seaborn (>=0.9.0)", "pooch (>=1.6.0)", "plotly (>=5.10.0)"]
+tests = ["matplotlib (>=3.1.3)", "scikit-image (>=0.16.2)", "pandas (>=1.0.5)", "pytest (>=5.3.1)", "pytest-cov (>=2.9.0)", "flake8 (>=3.8.2)", "black (>=22.3.0)", "mypy (>=0.961)", "pyamg (>=4.0.0)", "numpydoc (>=1.2.0)", "pooch (>=1.6.0)"]
+
+[[package]]
 name = "scipy"
 version = "1.10.1"
 description = "Fundamental algorithms for scientific computing in Python"
@@ -1793,6 +1821,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "sklearn"
+version = "0.0.post5"
+description = "deprecated sklearn package, use scikit-learn instead"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "smmap"
 version = "5.0.0"
 description = "A pure Python implementation of a sliding window memory map manager"
@@ -1834,6 +1870,14 @@ description = "The most basic Text::Unidecode port"
 category = "main"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "threadpoolctl"
+version = "3.1.0"
+description = "threadpoolctl"
+category = "main"
+optional = false
+python-versions = ">=3.6"
 
 [[package]]
 name = "toml"
@@ -2004,7 +2048,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.12"
-content-hash = "bfc528168e467ac75bc041b2e6dd7236e966e128b7c0387ede5d5d5544f18949"
+content-hash = "a285ba4e183a668d65f511ac452545054122a6088cb89e84bc1ef411b0a6df85"
 
 [metadata.files]
 aiohttp = []
@@ -2083,6 +2127,7 @@ ipython = []
 isort = []
 jedi = []
 jinja2 = []
+joblib = []
 jsonschema = []
 jupyter-client = []
 jupyter-core = []
@@ -2140,6 +2185,7 @@ requests = []
 rich = []
 "ruamel.yaml" = []
 "ruamel.yaml.clib" = []
+scikit-learn = []
 scipy = []
 scmrepo = []
 seaborn = []
@@ -2147,10 +2193,12 @@ setuptools-scm = []
 shortuuid = []
 shtab = []
 six = []
+sklearn = []
 smmap = []
 stack-data = []
 tabulate = []
 text-unidecode = []
+threadpoolctl = []
 toml = []
 tomli = []
 tomlkit = []
